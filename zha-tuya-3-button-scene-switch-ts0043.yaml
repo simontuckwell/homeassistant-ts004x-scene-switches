@@ -28,25 +28,25 @@ blueprint:
       description: Action to run on button 1 (left) long press
       default: []
       selector:
-         action: {} 
+         action: {}
     button_two_short_press:
       name: Single Press
-      description: Action to run on button 2 (center) single press
+      description: Action to run on button 2 (centre) single press
       default: []
       selector:
         action: {}
     button_two_double_press:
       name: Double Press
-      description: Action to run on button 2 (center) double press
+      description: Action to run on button 2 (centre) double press
       default: []
       selector:
         action: {}
     button_two_long_press:
       name: Long Press
-      description: Action to run on button 2 (center) long press
+      description: Action to run on button 2 (centre) long press
       default: []
       selector:
-         action: {}  
+         action: {}
     button_three_short_press:
       name: Single Press
       description: Action to run on button 3 (right) single press
@@ -64,7 +64,7 @@ blueprint:
       description: Action to run on button 3 (right) long press
       default: []
       selector:
-         action: {} 
+         action: {}
 mode: restart
 max_exceeded: silent
 trigger:
@@ -74,7 +74,7 @@ trigger:
     device_id: !input 'tuya_3button_scene_switch'
 action:
 - variables:
-    command: '{{ trigger.event.data.command }}'   
+    command: '{{ trigger.event.data.command }}'
     endpoint_id: '{{ trigger.event.data.endpoint_id }}'
 - choose:
   - conditions: "{{ command == 'remote_button_short_press' }}"
